@@ -30,6 +30,7 @@ public class Java8Tester {
       System.out.println("Hello " + message);
 		
       greetService1.sayMessage("Mahesh");
+      greetService1.sayMessage("Pabitwar");
       greetService2.sayMessage("Suresh");
    }
 	
