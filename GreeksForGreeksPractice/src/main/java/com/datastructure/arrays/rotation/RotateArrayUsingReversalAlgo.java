@@ -8,7 +8,7 @@ class RotateArrayUsingReversalAlgo {
 		int arr[] = { 1, 2, 3, 4, 5, 6, 7 };
 		int d = 2;
 
-		leftRotate(arr, d); //Rotate array by d
+		leftRotate(arr, d); // Rotate array by d
 		printArray(arr);
 	}
 	
