@@ -1,6 +1,6 @@
 package com.gamam.pattern01.twoPointers;
 
-public class TwoSum {
+public class P01TwoSum {
 
 	//https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/
 	
