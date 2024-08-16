@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "c6923682-bfca-4e38-a0a8-20035056299f",
+		"name": "SpringSecurityUsingJWT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37714526"
+	},
+	"item": [
+		{
+			"name": "GetAllUsers",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "mahesh",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mahesh",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCsrfToken",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "mahesh",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mahesh",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/csrf-token",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"csrf-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateNewUser",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "mahesh",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mahesh",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRF-TOKEN",
+						"value": "4JvA5P2KImLUhEzZPxotARQAXzhaiyXxbQ5ajAVRhpOL-Npvhq2l18i_Ggb5sy_tCzcZZCdlclpishLcXDxj6jxnt6u7welc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": \"3\",\n    \"name\": \"swati\",\n    \"surname\": \"pabitwar\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
