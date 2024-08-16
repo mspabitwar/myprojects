@@ -14,12 +14,12 @@
 					"basic": [
 						{
 							"key": "password",
-							"value": "mahesh",
+							"value": "admin",
 							"type": "string"
 						},
 						{
 							"key": "username",
-							"value": "mahesh",
+							"value": "admin",
 							"type": "string"
 						}
 					]
@@ -47,12 +47,12 @@
 					"basic": [
 						{
 							"key": "password",
-							"value": "mahesh",
+							"value": "admin",
 							"type": "string"
 						},
 						{
 							"key": "username",
-							"value": "mahesh",
+							"value": "admin",
 							"type": "string"
 						}
 					]
@@ -80,12 +80,12 @@
 					"basic": [
 						{
 							"key": "password",
-							"value": "mahesh",
+							"value": "admin",
 							"type": "string"
 						},
 						{
 							"key": "username",
-							"value": "mahesh",
+							"value": "admin",
 							"type": "string"
 						}
 					]
@@ -94,13 +94,14 @@
 				"header": [
 					{
 						"key": "X-CSRF-TOKEN",
-						"value": "4JvA5P2KImLUhEzZPxotARQAXzhaiyXxbQ5ajAVRhpOL-Npvhq2l18i_Ggb5sy_tCzcZZCdlclpishLcXDxj6jxnt6u7welc",
-						"type": "text"
+						"value": "uDVddTVxydvW1H57HmoI2PLOq95ejE-gSd1fn-WOIdmhkBgwiwE4EAIQ-7n7sEsdfEc87pT_hudv7n6Ne7trq9y8QurCpywA",
+						"type": "text",
+						"disabled": true
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"userId\": \"3\",\n    \"name\": \"swati\",\n    \"surname\": \"pabitwar\"\n}",
+					"raw": "{\n    \"userId\": \"3\",\n    \"name\": \"swati\",\n    \"surname\": \"pabitwar\",\n    \"password\": \"swati\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"

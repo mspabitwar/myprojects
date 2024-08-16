@@ -8,4 +8,6 @@ import com.spring.security.jwt.model.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
 
+	User findByName(String username);
+
 }

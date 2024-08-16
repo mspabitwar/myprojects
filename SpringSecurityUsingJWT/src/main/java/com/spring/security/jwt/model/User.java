@@ -12,7 +12,19 @@ public class User {
 	private Integer userId;
 	private String name;
 	private String surname;
+	private String password;
 	
+	public User() {
+	}
+	
+	public User(Integer userId, String name, String surname, String password) {
+		super();
+		this.userId = userId;
+		this.name = name;
+		this.surname = surname;
+		this.password = password;
+	}
+
 	public Integer getUserId() {
 		return userId;
 	}
@@ -36,8 +48,10 @@ public class User {
 		this.surname = surname;
 	}
 	
-	@Override
-	public String toString() {
-		return "User [userId=" + userId + ", name=" + name + ", surname=" + surname + "]";
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
 }
