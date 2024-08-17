@@ -16,6 +16,6 @@ public class InitialUserLoader {
 	}
 
 	private void LoadUsers() {
-		userRepository.save(new User(1,"admin","admin","admin"));
+		userRepository.save(new User(1,"admin","admin","$2a$12$9B8VgqwGmli04OUTS2Oj7ORtmIVKwcwa9.4gYHestsQhSnkdAJMbO"));
 	}
 }
