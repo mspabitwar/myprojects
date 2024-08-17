@@ -14,12 +14,12 @@
 					"basic": [
 						{
 							"key": "password",
-							"value": "admin",
+							"value": "mahesh",
 							"type": "string"
 						},
 						{
 							"key": "username",
-							"value": "admin",
+							"value": "mahesh",
 							"type": "string"
 						}
 					]
@@ -47,12 +47,12 @@
 					"basic": [
 						{
 							"key": "password",
-							"value": "admin",
+							"value": "mahesh",
 							"type": "string"
 						},
 						{
 							"key": "username",
-							"value": "admin",
+							"value": "mahesh",
 							"type": "string"
 						}
 					]
@@ -80,12 +80,12 @@
 					"basic": [
 						{
 							"key": "password",
-							"value": "admin",
+							"value": "mahesh",
 							"type": "string"
 						},
 						{
 							"key": "username",
-							"value": "admin",
+							"value": "mahesh",
 							"type": "string"
 						}
 					]
@@ -106,22 +106,10 @@
 			"response": []
 		},
 		{
-			"name": "CreateNewUser",
+			"name": "RegisterNewUser",
 			"request": {
 				"auth": {
-					"type": "basic",
-					"basic": [
-						{
-							"key": "password",
-							"value": "admin",
-							"type": "string"
-						},
-						{
-							"key": "username",
-							"value": "admin",
-							"type": "string"
-						}
-					]
+					"type": "noauth"
 				},
 				"method": "POST",
 				"header": [
@@ -134,7 +122,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"userId\": 3,\n    \"name\": \"swati\",\n    \"surname\": \"pabitwar\",\n    \"password\": \"swati\"\n}",
+					"raw": "{\n    \"userId\": 1,\n    \"name\": \"mahesh\",\n    \"surname\": \"pabitwar\",\n    \"password\": \"mahesh\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -142,13 +130,50 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/users",
+					"raw": "localhost:8080/register",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"users"
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UserLogin",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRF-TOKEN",
+						"value": "uDVddTVxydvW1H57HmoI2PLOq95ejE-gSd1fn-WOIdmhkBgwiwE4EAIQ-7n7sEsdfEc87pT_hudv7n6Ne7trq9y8QurCpywA",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": 1,\n    \"name\": \"mahesh\",\n    \"surname\": \"pabitwar\",\n    \"password\": \"mahesh\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/loginn",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"loginn"
 					]
 				}
 			},
@@ -162,12 +187,12 @@
 					"basic": [
 						{
 							"key": "password",
-							"value": "admin",
+							"value": "mahesh",
 							"type": "string"
 						},
 						{
 							"key": "username",
-							"value": "admin",
+							"value": "mahesh",
 							"type": "string"
 						}
 					]
@@ -183,7 +208,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"id\": 2,\n    \"name\": \"nirved\",\n    \"marks\": 90\n}",
+					"raw": "{\n    \"id\": 1,\n    \"name\": \"mahesh\",\n    \"marks\": 90\n}",
 					"options": {
 						"raw": {
 							"language": "json"

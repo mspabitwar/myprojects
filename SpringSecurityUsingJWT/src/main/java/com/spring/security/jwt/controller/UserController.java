@@ -25,13 +25,18 @@ public class UserController {
 		return userService.getAllUsers();
 	}
 	
-	@PostMapping("/users")
-	public User createUser(@RequestBody User user) {
-		return userService.createUser(user);
+	@PostMapping("/register")
+	public User register(@RequestBody User user) {
+		return userService.register(user);
 	}
 	
 	@GetMapping("/csrf-token")
 	public CsrfToken getCsrfToken(HttpServletRequest request) {
 		return (CsrfToken) request.getAttribute("_csrf");
+	}
+	
+	@PostMapping("/loginn")
+	public String login(@RequestBody User user) {
+		return userService.verify(user);
 	}
 }
