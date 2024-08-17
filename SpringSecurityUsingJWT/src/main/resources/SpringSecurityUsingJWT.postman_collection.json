@@ -40,6 +40,39 @@
 			"response": []
 		},
 		{
+			"name": "GetAllStudents",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/students",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "GetCsrfToken",
 			"request": {
 				"auth": {
@@ -101,7 +134,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"userId\": \"3\",\n    \"name\": \"swati\",\n    \"surname\": \"pabitwar\",\n    \"password\": \"swati\"\n}",
+					"raw": "{\n    \"userId\": 3,\n    \"name\": \"swati\",\n    \"surname\": \"pabitwar\",\n    \"password\": \"swati\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -116,6 +149,55 @@
 					"port": "8080",
 					"path": [
 						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateNewStudent",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRF-TOKEN",
+						"value": "uDVddTVxydvW1H57HmoI2PLOq95ejE-gSd1fn-WOIdmhkBgwiwE4EAIQ-7n7sEsdfEc87pT_hudv7n6Ne7trq9y8QurCpywA",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 2,\n    \"name\": \"nirved\",\n    \"marks\": 90\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/students",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"students"
 					]
 				}
 			},
