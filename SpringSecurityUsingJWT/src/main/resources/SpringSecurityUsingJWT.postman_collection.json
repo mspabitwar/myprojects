@@ -10,16 +10,11 @@
 			"name": "GetAllUsers",
 			"request": {
 				"auth": {
-					"type": "basic",
-					"basic": [
+					"type": "bearer",
+					"bearer": [
 						{
-							"key": "password",
-							"value": "mahesh",
-							"type": "string"
-						},
-						{
-							"key": "username",
-							"value": "mahesh",
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYWhlc2giLCJpYXQiOjE3MjM5NzU0MTMsImV4cCI6MTcyMzk3NTQ3M30.fW3MgzdHwF6TI9BY1mWRGwfjR9VxBbS2dA0trxvBvVM",
 							"type": "string"
 						}
 					]
@@ -43,16 +38,11 @@
 			"name": "GetAllStudents",
 			"request": {
 				"auth": {
-					"type": "basic",
-					"basic": [
+					"type": "bearer",
+					"bearer": [
 						{
-							"key": "password",
-							"value": "mahesh",
-							"type": "string"
-						},
-						{
-							"key": "username",
-							"value": "mahesh",
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYWhlc2giLCJpYXQiOjE3MjM5NzU0MTMsImV4cCI6MTcyMzk3NTQ3M30.fW3MgzdHwF6TI9BY1mWRGwfjR9VxBbS2dA0trxvBvVM",
 							"type": "string"
 						}
 					]
@@ -76,16 +66,11 @@
 			"name": "GetCsrfToken",
 			"request": {
 				"auth": {
-					"type": "basic",
-					"basic": [
+					"type": "bearer",
+					"bearer": [
 						{
-							"key": "password",
-							"value": "mahesh",
-							"type": "string"
-						},
-						{
-							"key": "username",
-							"value": "mahesh",
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYWhlc2giLCJpYXQiOjE3MjM5NzU0MTMsImV4cCI6MTcyMzk3NTQ3M30.fW3MgzdHwF6TI9BY1mWRGwfjR9VxBbS2dA0trxvBvVM",
 							"type": "string"
 						}
 					]
@@ -183,16 +168,11 @@
 			"name": "CreateNewStudent",
 			"request": {
 				"auth": {
-					"type": "basic",
-					"basic": [
+					"type": "bearer",
+					"bearer": [
 						{
-							"key": "password",
-							"value": "mahesh",
-							"type": "string"
-						},
-						{
-							"key": "username",
-							"value": "mahesh",
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYWhlc2giLCJpYXQiOjE3MjM5NzU0MTMsImV4cCI6MTcyMzk3NTQ3M30.fW3MgzdHwF6TI9BY1mWRGwfjR9VxBbS2dA0trxvBvVM",
 							"type": "string"
 						}
 					]
