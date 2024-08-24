@@ -8,7 +8,7 @@ class RunnerRunnable implements Runnable {
             System.out.println("Hello: " + i + " Thread: " + Thread.currentThread().getName());
 
             try {
-                Thread.sleep(100);
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
