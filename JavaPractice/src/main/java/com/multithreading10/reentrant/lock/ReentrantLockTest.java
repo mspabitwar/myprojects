@@ -1,4 +1,4 @@
-package com.multithreading09.reentrant.lock;
+package com.multithreading10.reentrant.lock;
 
 /**
  * the {@link java.util.concurrent.locks.ReentrantLock} class in Java as an

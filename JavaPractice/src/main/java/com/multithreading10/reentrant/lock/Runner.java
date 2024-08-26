@@ -1,4 +1,4 @@
-package com.multithreading09.reentrant.lock;
+package com.multithreading10.reentrant.lock;
 
 import java.util.Scanner;
 import java.util.concurrent.locks.Condition;
