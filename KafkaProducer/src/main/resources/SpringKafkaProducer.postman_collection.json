@@ -1,0 +1,30 @@
+{
+	"info": {
+		"_postman_id": "9d092c4c-1af5-4fe0-ad25-bd05d648e5f3",
+		"name": "SpringKafkaProducer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37714526"
+	},
+	"item": [
+		{
+			"name": "PublishMessge",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:9191/producer-app/publish/user",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"producer-app",
+						"publish",
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
