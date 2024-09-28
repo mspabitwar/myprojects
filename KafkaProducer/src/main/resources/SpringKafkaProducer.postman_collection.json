@@ -25,6 +25,34 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "PublishEvent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"name\": \"testName\",\n    \"email\": \"testEmail\",\n    \"contactNo\": \"testContactNo\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9191/producer-app/publish-event",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"producer-app",
+						"publish-event"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
