@@ -1,4 +1,4 @@
-package com.spring.kafka.producer.config;
+package com.spring.kafka.config;
 
 import org.apache.kafka.clients.admin.NewTopic;
 import org.springframework.context.annotation.Bean;
@@ -9,6 +9,6 @@ public class KafkaProducerConfig {
 
     @Bean
     public NewTopic createTopic() {
-		return new NewTopic("DemoTopic", 5, (short) 1);
+		return new NewTopic("DemoTopic1", 5, (short) 1);
 	}
 }
