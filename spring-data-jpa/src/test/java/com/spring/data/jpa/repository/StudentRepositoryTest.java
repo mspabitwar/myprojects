@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import com.spring.data.jpa.entity.Guardian;
 import com.spring.data.jpa.entity.Student;
 
 @SpringBootTest
@@ -17,8 +18,21 @@ class StudentRepositoryTest {
 	@Test
 	public void saveStudent() {
 		Student student = Student.builder().emailId("shabbir@gmail.com").firstName("Shabbir").lastName("Dawoodi")
-				.guardianName("Nikhil").guardianEmail("nikhil@gmail.com").guardianMobile("9999999999").build();
+				//.guardianName("Nikhil").guardianEmail("nikhil@gmail.com").guardianMobile("9999999999")
+				.build();
 		studentRepository.save(student);
+	}
+	
+	@Test
+	public void saveStudentWithGuardian() {
+
+		Guardian guardian = Guardian.builder().email("nikhil@gmail.com").name("Nikhil").mobile("9999956324").build();
+
+		Student student = Student.builder().firstName("Shivam").emailId("shivam@gmail.com").lastName("Kumar")
+				.guardian(guardian).build();
+
+		studentRepository.save(student);
+
 	}
 	
 	@Test
