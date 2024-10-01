@@ -1,14 +1,14 @@
 package com.spring.data.jpa.entity;
 
-import java.util.List;
+//import java.util.List;
 
-import jakarta.persistence.CascadeType;
+//import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToMany;
+//import jakarta.persistence.JoinColumn;
+//import jakarta.persistence.OneToMany;
 import jakarta.persistence.SequenceGenerator;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -29,7 +29,7 @@ public class Teacher {
 	private String firstName;
 	private String lastName;
 
-	@OneToMany(cascade = CascadeType.ALL)
+	/*@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name = "teacherid", referencedColumnName = "teacherId")
-	private List<Course> courses;
+	private List<Course> courses;*/
 }
