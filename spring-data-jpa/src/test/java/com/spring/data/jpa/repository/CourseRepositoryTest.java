@@ -10,6 +10,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 
 import com.spring.data.jpa.entity.Course;
+import com.spring.data.jpa.entity.Student;
 import com.spring.data.jpa.entity.Teacher;
 
 @SpringBootTest
@@ -46,23 +47,33 @@ class CourseRepositoryTest {
 		System.out.println("totalElements = " + totalElements);
 		System.out.println("courses = " + courses);
 	}
-	
+
 	@Test
 	public void findAllSorting() {
-		
+
 		Pageable sortByTitle = PageRequest.of(0, 2, Sort.by("title"));
 		Pageable sortByCreditDesc = PageRequest.of(0, 2, Sort.by("credit").descending());
 		Pageable sortByTitleAndCreditDesc = PageRequest.of(0, 2, Sort.by("title").descending().and(Sort.by("credit")));
-		
+
 		List<Course> courses = courseRepository.findAll(sortByTitle).getContent();
-		
+
 		System.out.println("courses = " + courses);
 	}
-	
+
 	@Test
 	public void printfindByTitleContaining() {
 		Pageable firstPageTenRecords = PageRequest.of(0, 10);
 		List<Course> courses = courseRepository.findByTitleContaining("D", firstPageTenRecords).getContent();
 		System.out.println("courses = " + courses);
+	}
+
+	@Test
+	public void saveCourseWithStudentAndTeacher() {
+		Teacher teacher = Teacher.builder().firstName("Lizze").lastName("Morgan").build();
+		Student student = Student.builder().firstName("Abhishek").lastName("Singh").emailId("abhishek@gmail.com")
+				.build();
+		Course course = Course.builder().title("AI").credit(12).teacher(teacher).build();
+		course.addStudents(student);
+		courseRepository.save(course);
 	}
 }
