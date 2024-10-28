@@ -1,25 +1,25 @@
 package com.java.durga.concept06.anonymous.inner.classes;
 
+class ConcreteClass {
+}
+
+abstract class AbstractClass {
+	public abstract void m1();
+}
+
+interface InterfaceContainingMultipleAbstractMethods {
+	public void m1();
+	public void m2();
+}
+
+interface InterfaceContainingSingleAbstractMethods {
+	public void m1();
+}
+
 public class AnonymousInnerClassDemo {
-
-	interface InterfaceContainingMultipleAbstractMethods {
-		public void m1();
-		public void m2();
-	}
-
-	interface InterfaceContainingSingleAbstractMethods {
-		public void m1();
-	}
 
 	@SuppressWarnings("unused")
 	public static void main(String[] args) {
-
-		class ConcreteClass {
-		}
-		
-		abstract class AbstractClass {
-			public abstract void m1();
-		}
 
 		// Case-1
 		ConcreteClass concreteClass = new ConcreteClass() {};
