@@ -2,6 +2,7 @@ package com.java.durga.concept09.predicates;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 import java.util.function.Predicate;
 
 class Employee {
@@ -21,6 +22,25 @@ class Employee {
 	@Override
 	public String toString() {
 		return String.format("(%s,%s,%.2f,%s)", name, designation, salary, city);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(city, designation, name, salary);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Employee other = (Employee) obj;
+		return Objects.equals(city, other.city) && Objects.equals(designation, other.designation)
+				&& Objects.equals(name, other.name)
+				&& Double.doubleToLongBits(salary) == Double.doubleToLongBits(other.salary);
 	}
 }
 
@@ -53,6 +73,12 @@ public class EmployeeManagementSystem {
 		
 		System.out.println("Employees who are not managers are:");
 		display(managerPredicate.negate(), employees);
+		
+		Predicate<Employee> isCEO=Predicate.isEqual(new Employee("Durga","CEO",30000,"Hyderabad"));
+		Employee e1=new Employee("Durga","CEO",30000,"Hyderabad");
+		Employee e2=new Employee("Sunny","Manager",20000,"Hyderabad");
+		System.out.println(isCEO.test(e1));//true
+		System.out.println(isCEO.test(e2));//false
 	}
 
 	private static List<Employee> populate() {
