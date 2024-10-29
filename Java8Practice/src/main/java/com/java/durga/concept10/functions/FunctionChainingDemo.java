@@ -15,5 +15,12 @@ public class FunctionChainingDemo {
 				+ uppercaseFun.andThen(substringFun).apply("AishwaryaAbhi"));
 		System.out.println("The result of uppercaseFun.componse(substringFun) = "
 				+ uppercaseFun.compose(substringFun).apply("AishwaryaAbhi"));
+
+		Function<Integer, Integer> dounbleFun = n -> 2 * n;
+		Function<Integer, Integer> cubeFun = n -> n * n * n;
+		System.out.println(
+				"The result of dounbleFun.andThen(cubeFun).apply(2) = " + dounbleFun.andThen(cubeFun).apply(2));//64
+		System.out.println(
+				"The result of dounbleFun.compose(cubeFun).apply(2) = " + dounbleFun.compose(cubeFun).apply(2));//16
 	}
 }
