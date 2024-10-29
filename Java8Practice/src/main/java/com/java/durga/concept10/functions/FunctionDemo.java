@@ -3,6 +3,7 @@ package com.java.durga.concept10.functions;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Function;
+import java.util.function.Predicate;
 
 class Student {
 	
@@ -49,10 +50,13 @@ public class FunctionDemo {
 			}
 			return grade;
 		};
-		
+		Predicate<Student> marksPredicate = s -> s.marks >= 60;
+
 		for (Student student : students) {
-			System.out.println("Student Name: " + student.name + ", Makrs: " + student.marks + ", Grade: "
-					+ gradeCalculator.apply(student));
+			if (marksPredicate.test(student)) {
+				System.out.println("Student Name: " + student.name + ", Makrs: " + student.marks + ", Grade: "
+						+ gradeCalculator.apply(student));
+			}
 		}
 
 	}
