@@ -18,7 +18,7 @@ public class SortedDemo {
 				.collect(Collectors.toList());
 		System.out.println("Numbers with default sorting" + numbersSortedInDescOrder);
 		
-		System.out.println("Min Value: " + numbers.stream().min((n1, n2) -> n1 - n2));
-		System.out.println("Max Value: " + numbers.stream().max((n1, n2) -> n1 - n2));
+		System.out.println("Min Value: " + numbers.stream().min((n1, n2) -> n1 - n2).get());
+		System.out.println("Max Value: " + numbers.stream().max((n1, n2) -> n1 - n2).get());
 	}
 }
