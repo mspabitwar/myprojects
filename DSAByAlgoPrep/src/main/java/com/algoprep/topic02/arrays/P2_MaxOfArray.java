@@ -17,7 +17,7 @@ public class P2_MaxOfArray {
 			}
 
 			int max = numbers[0];
-			// int max = Integer.MIN_VALUE;
+			// int max = Integer.MIN_VALUE; in this case, index should start from 0
 
 			for (int index = 1; index < size; index++) {
 				max = numbers[index] > max ? numbers[index] : max;
