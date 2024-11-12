@@ -2,7 +2,7 @@ package com.algoprep.topic02.arrays;
 
 import java.util.Scanner;
 
-public class P8_TwoSum {
+public class P08_TwoSum {
 
 	public static void main(String[] args) {
 

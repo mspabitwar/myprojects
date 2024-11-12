@@ -2,7 +2,7 @@ package com.algoprep.topic02.arrays;
 
 import java.util.Scanner;
 
-public class P1_SumOfArray {
+public class P02_MaxOfArray {
 
 	public static void main(String[] args) {
 
@@ -11,16 +11,19 @@ public class P1_SumOfArray {
 			int size = scanner.nextInt();
 			int[] numbers = new int[size];
 
-			int sum = 0;
-
 			System.out.println("Enter elements of array");
 			for (int index = 0; index < size; index++) {
 				numbers[index] = scanner.nextInt();
-				sum += numbers[index];
 			}
 
-			System.out.println("Sum = " + sum);
+			int max = numbers[0];
+			// int max = Integer.MIN_VALUE; in this case, index should start from 0
 
+			for (int index = 1; index < size; index++) {
+				max = numbers[index] > max ? numbers[index] : max;
+			}
+
+			System.out.println("Max = " + max);
 		}
 	}
 }

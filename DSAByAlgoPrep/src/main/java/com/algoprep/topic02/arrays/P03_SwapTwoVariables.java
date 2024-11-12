@@ -2,7 +2,7 @@ package com.algoprep.topic02.arrays;
 
 import java.util.Scanner;
 
-public class P3_SwapTwoVariables {
+public class P03_SwapTwoVariables {
 
 	public static void main(String[] args) {
 

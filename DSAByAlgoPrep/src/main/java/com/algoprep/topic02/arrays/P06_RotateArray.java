@@ -2,7 +2,7 @@ package com.algoprep.topic02.arrays;
 
 import java.util.Scanner;
 
-public class P5_ReversePartOfArray {
+public class P06_RotateArray {
 
 	public static void main(String[] args) {
 
@@ -16,18 +16,22 @@ public class P5_ReversePartOfArray {
 				numbers[index] = scanner.nextInt();
 			}
 
-			System.out.println("Enter indices for partical reverse");
-			int startIndex = scanner.nextInt();
-			int endIndex = scanner.nextInt();
+			System.out.println("Enter number of rotations");
+			int numberOfRotations = scanner.nextInt();
 
-			System.out.print("Array Before Part Reverse : ");
+			System.out.print("Array Before Rotation : ");
 			for (int index = 0; index < size; index++) {
 				System.out.print(numbers[index] + " ");
 			}
 			System.out.println();
-			reverse(numbers, startIndex, endIndex);
 
-			System.out.print("Array After Part Reverse : ");
+			numberOfRotations = numberOfRotations % size;
+
+			reverse(numbers, 0, size - 1);
+			reverse(numbers, 0, numberOfRotations - 1);
+			reverse(numbers, numberOfRotations, size - 1);
+
+			System.out.print("Array After " + numberOfRotations + " Rotation : ");
 			for (int index = 0; index < size; index++) {
 				System.out.print(numbers[index] + " ");
 			}

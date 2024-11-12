@@ -2,7 +2,7 @@ package com.algoprep.topic02.arrays;
 
 import java.util.Scanner;
 
-public class P7_GreaterThanItself {
+public class P07_GreaterThanItself {
 
 	public static void main(String[] args) {
 

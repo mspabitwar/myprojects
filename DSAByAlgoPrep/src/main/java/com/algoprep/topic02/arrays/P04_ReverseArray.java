@@ -2,9 +2,12 @@ package com.algoprep.topic02.arrays;
 
 import java.util.Scanner;
 
-public class P6_RotateArray {
+public class P04_ReverseArray {
 
 	public static void main(String[] args) {
+
+		// Test for odd length array [10, 20, 30, 40, 50]
+		// Test for even length array [10, 20, 30, 40, 50, 60]
 
 		try (Scanner scanner = new Scanner(System.in)) {
 			System.out.println("Enter size of array");
@@ -16,32 +19,24 @@ public class P6_RotateArray {
 				numbers[index] = scanner.nextInt();
 			}
 
-			System.out.println("Enter number of rotations");
-			int numberOfRotations = scanner.nextInt();
-
-			System.out.print("Array Before Rotation : ");
+			System.out.print("Array Before Reverse : ");
 			for (int index = 0; index < size; index++) {
 				System.out.print(numbers[index] + " ");
 			}
 			System.out.println();
+			reverse(numbers);
 
-			numberOfRotations = numberOfRotations % size;
-
-			reverse(numbers, 0, size - 1);
-			reverse(numbers, 0, numberOfRotations - 1);
-			reverse(numbers, numberOfRotations, size - 1);
-
-			System.out.print("Array After " + numberOfRotations + " Rotation : ");
+			System.out.print("Array After Reverse : ");
 			for (int index = 0; index < size; index++) {
 				System.out.print(numbers[index] + " ");
 			}
 		}
 	}
 
-	private static void reverse(int[] numbers, int startIndex, int endIndex) {
+	private static void reverse(int[] numbers) {
 
-		int left = startIndex;
-		int right = endIndex;
+		int left = 0;
+		int right = numbers.length - 1;
 		int temp;
 
 		while (left < right) {

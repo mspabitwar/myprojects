@@ -2,12 +2,9 @@ package com.algoprep.topic02.arrays;
 
 import java.util.Scanner;
 
-public class P4_ReverseArray {
+public class P05_ReversePartOfArray {
 
 	public static void main(String[] args) {
-
-		// Test for odd length array [10, 20, 30, 40, 50]
-		// Test for even length array [10, 20, 30, 40, 50, 60]
 
 		try (Scanner scanner = new Scanner(System.in)) {
 			System.out.println("Enter size of array");
@@ -19,24 +16,28 @@ public class P4_ReverseArray {
 				numbers[index] = scanner.nextInt();
 			}
 
-			System.out.print("Array Before Reverse : ");
+			System.out.println("Enter indices for partical reverse");
+			int startIndex = scanner.nextInt();
+			int endIndex = scanner.nextInt();
+
+			System.out.print("Array Before Part Reverse : ");
 			for (int index = 0; index < size; index++) {
 				System.out.print(numbers[index] + " ");
 			}
 			System.out.println();
-			reverse(numbers);
+			reverse(numbers, startIndex, endIndex);
 
-			System.out.print("Array After Reverse : ");
+			System.out.print("Array After Part Reverse : ");
 			for (int index = 0; index < size; index++) {
 				System.out.print(numbers[index] + " ");
 			}
 		}
 	}
 
-	private static void reverse(int[] numbers) {
+	private static void reverse(int[] numbers, int startIndex, int endIndex) {
 
-		int left = 0;
-		int right = numbers.length - 1;
+		int left = startIndex;
+		int right = endIndex;
 		int temp;
 
 		while (left < right) {
