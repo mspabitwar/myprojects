@@ -6,15 +6,12 @@ public class P03_ReverseString {
 
 		String algoprep = "algoprep";
 		System.out.println("Input: " + algoprep);
-
-		char[] ch = algoprep.toCharArray();
-		reverse(ch);
-
-		System.out.println("Output: " + String.valueOf(ch));
+		System.out.println("Output: " + reverse(algoprep));
 
 	}
 
-	private static void reverse(char[] ch) {
+	private static String reverse(String algoprep) {
+		char[] ch = algoprep.toCharArray();
 		int left = 0;
 		int right = ch.length - 1;
 
@@ -25,5 +22,6 @@ public class P03_ReverseString {
 			left++;
 			right--;
 		}
+		return String.valueOf(ch);
 	}
 }
