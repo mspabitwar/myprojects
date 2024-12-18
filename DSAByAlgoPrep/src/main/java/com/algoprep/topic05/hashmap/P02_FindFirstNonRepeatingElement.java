@@ -8,8 +8,7 @@ public class P02_FindFirstNonRepeatingElement {
 
 	public static void main(String[] args) {
 
-		// Given array[n] and queries[m], for every query, find the frequency of
-		// elements in array
+		// Given array[n], find first non repeating elements in array
 
 		try (Scanner scanner = new Scanner(System.in)) {
 			System.out.println("Enter size of array");
